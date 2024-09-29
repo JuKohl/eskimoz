@@ -1,0 +1,30 @@
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 1.6;
+}
+
+.clock-container {
+  font-size: 2rem;
+}
+
+.date-title,
+.time-title {
+  background: lightslategrey;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+@keyframes alarmBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.alarm-triggered {
+  animation: alarmBlink 1s infinite;
+  font-size: 24px;
+  color: rgb(255, 255, 0);
+  text-align: center;
+  margin-top: 20px;
+}
