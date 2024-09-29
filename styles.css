@@ -3,16 +3,37 @@ body {
   line-height: 1.6;
 }
 
-.clock-container {
+ul > li {
+  text-decoration: none;
+}
+
+.clock-container,
+.button-create-alarm,
+.button-delete-alarm  {
   font-size: 2rem;
+  text-align: center;
 }
 
 .date-title,
-.time-title {
+.time-title,
+.button-create-alarm,
+.button-delete-alarm {
   background: lightslategrey;
   color: white;
   border-radius: 15px;
-  text-align: center;
+}
+
+.button-create-alarm,
+.button-delete-alarm {
+  margin: 20px;
+}
+
+.button-create-alarm:hover {
+  background: rgb(0, 128, 0);
+}
+
+.button-delete-alarm:hover {
+  background: rgb(255, 0, 0);
 }
 
 @keyframes alarmBlink {
@@ -24,7 +45,7 @@ body {
 .alarm-triggered {
   animation: alarmBlink 1s infinite;
   font-size: 24px;
-  color: rgb(255, 255, 0);
+  color: rgb(255, 0, 0);
   text-align: center;
   margin-top: 20px;
 }

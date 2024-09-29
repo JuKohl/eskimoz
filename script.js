@@ -75,7 +75,7 @@ const AlarmApp = () => {
                 value: newAlarm,
                 onChange: (e) => setNewAlarm(e.target.value)
                 }),
-              React.createElement('button', { onClick: addAlarm }, 'Ajouter Alarme')
+              React.createElement('button', { onClick: addAlarm, className: 'button-create-alarm' }, 'Ajouter Alarme')
             ),
             React.createElement('h2', null, 'Liste des alarmes'),
             alarms.length === 0
@@ -85,7 +85,8 @@ const AlarmApp = () => {
                     React.createElement('li', { key: index },
                       alarm.toLocaleString(),
                     React.createElement('button', {
-                      onClick: () => deleteAlarm(index)
+                      onClick: () => deleteAlarm(index),
+                      className: 'button-delete-alarm'
                       }, 'Supprimer')
                     )
                   ))
